@@ -1,0 +1,166 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-31 09:42+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+#: .\stor\templates\base.html:8 .\stor\templates\partials\header.html:6
+msgid "App Name"
+msgstr "اسم التطبيق"
+
+#: .\stor\templates\cart.html:10
+msgid "card"
+msgstr "بطاقة"
+
+#: .\stor\templates\cart.html:63
+msgid "priec"
+msgstr "السعر"
+
+#: .\stor\templates\cart.html:67 .\stor\templates\email\order.html:179
+msgid "total"
+msgstr "الإجمالي"
+
+#: .\stor\templates\cart.html:74
+msgid "Continue to payment page"
+msgstr "الاستمرار إلى صفحة الدفع"
+
+#: .\stor\templates\category.html:20
+msgid "All"
+msgstr "الكل"
+
+#: .\stor\templates\category.html:41
+msgid "There is no book with this name."
+msgstr "لا يوجد كتاب بهذا الاسم."
+
+#: .\stor\templates\category.html:60
+msgid "Next"
+msgstr "التالي"
+
+#: .\stor\templates\checkout.html:10
+msgid "Amount to pay"
+msgstr "المبلغ الواجب دفعه"
+
+#: .\stor\templates\checkout.html:16
+msgid "Your info"
+msgstr "معلوماتك"
+
+#: .\stor\templates\checkout.html:24
+msgid " First Name"
+msgstr "الاسم الأول"
+
+#: .\stor\templates\checkout.html:30
+msgid "Last Name"
+msgstr "الاسم الأخير"
+
+#: .\stor\templates\checkout.html:36
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#: .\stor\templates\checkout.html:43
+msgid "Payment Method"
+msgstr "طريقة الدفع"
+
+#: .\stor\templates\checkout.html:49
+msgid "Paypal"
+msgstr "بايبال"
+
+#: .\stor\templates\checkout.html:57
+msgid "Credit Card"
+msgstr "بطاقة ائتمان"
+
+#: .\stor\templates\checkout.html:69
+msgid "Pay Now"
+msgstr "ادفع الآن"
+
+#: .\stor\templates\checkout_complete.html:16
+msgid ""
+"Your purchase has been completed successfully, you will receive an email "
+"containing links to download the books you ordered!"
+msgstr ""
+"تم إتمام عملية الشراء بنجاح، ستتلقى بريدًا إلكترونيًا يحتوي على روابط لتنزيل الكتب التي طلبتها!"
+
+#: .\stor\templates\checkout_complete.html:19
+msgid "Back to Home Page"
+msgstr "الرجوع إلى الصفحة الرئيسية"
+
+#: .\stor\templates\common\page_title.html:3
+msgid "title"
+msgstr "العنوان"
+
+#: .\stor\templates\common\product_card.html:14
+msgid "add to cart"
+msgstr "أضف إلى السلة"
+
+#: .\stor\templates\common\product_card.html:16
+msgid "view"
+msgstr "عرض"
+
+#: .\stor\templates\email\order.html:49
+msgid "Bookstore"
+msgstr "مكتبة"
+
+#: .\stor\templates\email\order.html:59
+msgid "Customer"
+msgstr "العميل"
+
+#: .\stor\templates\email\order.html:87
+msgid "Date"
+msgstr "التاريخ"
+
+#: .\stor\templates\email\order.html:127
+msgid "Book"
+msgstr "كتاب"
+
+#: .\stor\templates\email\order.html:138
+msgid "Price"
+msgstr "السعر"
+
+#: .\stor\templates\index.html:13
+msgid "Featured Books"
+msgstr "الكتب المميزة"
+
+#: .\stor\templates\partials\footer.html:4
+msgid "© 2022 All rights reserved"
+msgstr "© 2022 جميع الحقوق محفوظة"
+
+#: .\stor\templates\partials\header.html:23
+msgid "Card"
+msgstr "السلة"
+
+#: .\stor\templates\partials\header_search.html:9
+msgid "Serch"
+msgstr "بحث"
+
+#: .\stor\templates\partials\header_search.html:13
+msgid "All categorys"
+msgstr "جميع الفئات"
+
+#: .\stor\templates\product.html:35
+msgid "add to cat"
+msgstr "أضف إلى السلة"
+
+#: .\stor\templates\product.html:63
+msgid "Description"
+msgstr "الوصف"
+
+#: .\stor\templates\product.html:77
+msgid "Author"
+msgstr "المؤلف"
+
+#: .\stor\views.py:89
+msgid "The product has been added to your cart."
+msgstr "تم إضافة المنتج إلى سلتك."
