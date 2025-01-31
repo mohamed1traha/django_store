@@ -1,0 +1,37 @@
+{% load static %} 
+{% load i18n %} 
+<!DOCTYPE html>
+<html lang="ar" class="h-100" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% trans 'App Name' %}</title>
+
+    <script defer src="{% static 'js/101.1e5dc28f.js' %}"></script>
+    <script defer src="{% static 'js/app.f2c1fd71.js' %}"></script>
+    <link href="{% static 'css/101.css' %}" rel="stylesheet">
+    <link href="{% static 'css/app.css' %}" rel="stylesheet">
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+  </head>
+
+  <body class="d-flex flex-column h-100 bg-light">
+    {% include 'partials/header.html' %}
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    {% include 'partials/footer.html' %}
+
+    <!-- تضمين السكربتات الخاصة بك -->
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/stripe.js' %}" defer></script>
+    <script src="{% static 'js/your-script.js' %}"></script>
+
+  </body>
+</html>

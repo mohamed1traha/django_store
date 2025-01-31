@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load my_filters %}
+{% load static %}
+
+
+{% block content %}
+<main>
+    <div class="bg-white py-4">
+      <h1 class="text-center text-secondary">{% trans 'card' %}</h1>
+    </div>
+    <div class="container my-5">
+      {% for product in cart_product %}
+      <div class="card my-2">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-2 text-center mb-2">
+              <img
+                src="{{product.image.url}}"
+                alt=""
+                title=""
+                width="150"
+                class="img-thumbnail"
+              />
+            </div>
+            <div class="col my-auto text-center">
+              {{product.name}}
+            </div>
+            <div class="col-md-2 col-xs-6 my-auto text-center">
+              <strong>{{product.price|currency}}</strong>
+            </div>
+            <div class="col-md-2 my-auto text-center">
+              <button 
+              class="btn btn-secondary my-2" 
+              type="button" 
+              data-url="{% url 'stor.cart_remove' product.id %}" 
+              onclick="cartRemove(this)">
+              <i class="lni lni-trash-can text-white"></i>
+            </button>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    {% empty %}
+    <div class="row bd-highlight">
+      <div class="col-md-12">
+        <h4 class="my-3 text-center">
+          <div class="alert alert-success py-3">
+            <h3 class="text-center">NO products</h3>
+          </div>
+        </h4>
+      </div>
+      {% endfor %}
+      {% if cart_total > 0 %}
+      <div class="row bd-highlight">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <table class="table table-striped">
+                <tbody>
+                  <tr>
+                    <td>{% trans 'priec' %}</td>
+                    <td>{{cart_total}}</td>
+                  </tr>
+                  <tr>
+                    <td>{% trans 'total' %}</td>
+                    <td>{{cart_total}}</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="d-grid gap-2">
+                <a href="{% url 'stor.checkout' %}" class="btn btn-primary">
+                  {% trans 'Continue to payment page' %}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </main>
+{% endblock %}
