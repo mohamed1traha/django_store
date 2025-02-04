@@ -1,0 +1,36 @@
+{% extends 'admin/base_site.html' %}
+
+{% load i18n %}
+
+{% block content %}
+
+<h1>{% trans 'Sales Weekly' %}</h1>
+<div id="weekly-chart" style="width: calc(100% - 275px)" data-list="{{week_stats}}"></div>
+
+<h1>{% trans 'Sales Monthly' %}</h1>
+<div id="monthly-chart" style="width: calc(100% - 275px)" data-list="{{monthly_stats}}"></div>
+
+<h1>{% trans 'Sales Yearly' %}</h1>
+<div id="yearly-chart" style="width: calc(100% - 275px)" data-list="{{yearly_stats}}"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+<script>
+    function renderChart(elementId, data, categoryFormatter) {
+        const stats = JSON.parse(document.getElementById(elementId).dataset.list);
+
+        const chart = new ApexCharts(document.querySelector(`#${elementId}`), {
+            chart: { type: 'bar', height: 200 },
+            series: [{ name: 'sales', data: stats.map(e => e.num) }],
+            xaxis: { categories: stats.map(categoryFormatter) }
+        });
+
+        chart.render();
+    }
+
+    renderChart('weekly-chart', 'week_stats', e => `${e.year}/w${e.week}`);
+    renderChart('monthly-chart', 'monthly_stats', e => `${e.year}/${e.month}`);
+    renderChart('yearly-chart', 'yearly_stats', e => e.year);
+</script>
+
+{% endblock %}

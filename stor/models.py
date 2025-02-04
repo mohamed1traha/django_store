@@ -2,7 +2,6 @@ from django.db import models
 from django.contrib.sessions.models import Session
 from django_stor import settings
 
-
 # Create your models here.
 class Category(models.Model):
     name = models.CharField(max_length=255, unique=True)
@@ -53,16 +52,14 @@ class Order(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     update_at = models.DateTimeField(auto_now=True)
 
-    @property
-    def customer_name(self):
-        return self.customer['first_name'] + ' ' + self.customer['last_name']
+
 
 
     def __str__(self): 
         return str(self.id)
     
 class OrderProduct(models.Model):
-    order = models.ForeignKey(Order, on_delete=models.PROTECT)
+    order = models.ForeignKey(Order, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.PROTECT)
     price = models.FloatField()
     created_at = models.DateTimeField(auto_now_add=True)

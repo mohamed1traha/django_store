@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'stor',
     'checkout',
+    'reports',
 ]
 
 MIDDLEWARE = [
@@ -132,8 +133,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
-STATICFILES_DIRS = [BASE_DIR / 'static/']
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
@@ -150,10 +151,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # Looking to send emails in production? Check out our Email API/SMTP product!
+# Looking to send emails in production? Check out our Email API/SMTP product!
+
 EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
-EMAIL_HOST_USER = '7979dbe16e3945'
-EMAIL_HOST_PASSWORD = 'f57468b48d46fe'
+EMAIL_HOST_USER = '4671076bec2f3a'
+EMAIL_HOST_PASSWORD = '4b23e2ac36cf31'
 EMAIL_PORT = '2525'
+
+
 
 SITE_URL ='http://127.0.0.1:8000/'
 
@@ -164,3 +169,7 @@ STRIPE_PUBLISHABLE_KEY="pk_test_51QmAz803AZn20b37mrSv8eRWcIipTmZbFTO8Ix32pexMTQJ
 STRIPE_SECRET_KEY="sk_test_51QmAz803AZn20b37gIsun0jagiNKNeeZWWVipxzdh9L2QQr0zOFQHJ5rccKnIJ3uefR22z2qubnb2N279tMxqnql00kPJb8Oqj"
 
 CURRENCY= 'USD'
+
+
+STRIPE_WEBHOOK_SECRET = 'whsec_096d7f61391214ac1ec672392adc0d146488d836fa58a3e7e14e24d9d34c87b5'
+APPEND_SLASH = False

@@ -5,8 +5,6 @@ from .forms import UserForms
 from .models import Transaction, PaymenMethod
 from stor.models import Product, Cart, Order
 from django.shortcuts import redirect
-from django.core.mail import send_mail
-from django.template.loader import render_to_string
 from django.utils.translation import gettext as _
 import stripe
 def stripe_config(request):

@@ -6,8 +6,8 @@ name = "pypi"
 [packages]
 psycopg2 = "*"
 pillow = "*"
-stripe = "*"
 django = "*"
+stripe = "*"
 
 [dev-packages]
 
